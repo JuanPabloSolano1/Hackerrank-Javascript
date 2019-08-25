@@ -1,0 +1,11 @@
+function diagonalDifference(arr) {
+  let a = 0
+  let b = 0
+  for (var i = 0; i < array.length; i++) {
+    let first_diagonal = (array[i][i])
+     a += first_diagonal
+    let second_diagonal = array[array.length-1 -i][i]
+    b += second_diagonal
+  }
+  console.log(Math.abs((first_diagonal-second_diagonal)))
+}
