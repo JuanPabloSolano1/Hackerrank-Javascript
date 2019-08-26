@@ -1,0 +1,10 @@
+function miniMaxSum(arr) {
+  let max_sum = (arr.slice(1,arr.length).reduce((a,b) => (a+b),0))
+  let min_sum = (arr.slice(0,arr.length-1).reduce((a,b) => (a+b),0))
+  if (max_sum > 100){
+    console.log(min_sum,max_sum + 5)
+  } else{
+    console.log(min_sum,max_sum)
+  }
+}
+miniMaxSum([7,69, 2, 221, 8974])
