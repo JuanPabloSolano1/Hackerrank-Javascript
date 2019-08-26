@@ -1,0 +1,11 @@
+function main(n) {
+ let stair, hash
+ for (var i = 0; i < n; i++) {
+   stair = n - 1 -i
+   hash = i + 1
+   let check = " ".repeat(stair) + "#".repeat(hash)
+   console.log(check)
+ }
+}
+
+main(6);
