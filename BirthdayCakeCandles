@@ -1,0 +1,10 @@
+function birthdayCakeCandles(ar) {
+    let max = Math.max.apply(null, ar)
+    let count = 0
+    ar.forEach((element) => {
+        if (element == max) {
+            count++
+        }
+    })
+  return(count)
+}   
