@@ -1,0 +1,13 @@
+let array = [73, 67, 38, 33]
+let new_array = []
+array.map(element=>{
+  if (element < 38){
+    new_array.push(element)
+  }else if(((Math.ceil(element / 5) * 5) - element) < 3){
+    new_array.push((Math.ceil(element / 5) * 5))
+  }else{
+    new_array.push(element)
+  }
+})
+
+return (new_array)
