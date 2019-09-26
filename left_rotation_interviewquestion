@@ -1,0 +1,6 @@
+function rotLeft(a, d) {
+ for (var i = 0; i < d; i++) {
+  a.push(a.shift(a[0]))
+}
+return(a)
+}
