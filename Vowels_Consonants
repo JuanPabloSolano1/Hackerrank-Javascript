@@ -1,0 +1,17 @@
+let string = "javascript"
+let vowel = "aeiou"
+let consonant = ""
+
+new_list = []
+for (var i = 0; i < string.split("").length; i++) {
+  if(vowel.split("").includes(string.split("")[i])){
+    new_list.push(string.split("")[i])
+}
+}
+
+for (var i = 0; i < string.split("").length; i++) {
+  if(!vowel.split("").includes(string.split("")[i])){
+    new_list.push(string.split("")[i])
+}
+}
+console.log(new_list)
