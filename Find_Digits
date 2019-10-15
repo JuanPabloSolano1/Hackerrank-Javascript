@@ -1,0 +1,6 @@
+let number = 1012
+let new_list = []
+number.toString().split("").map(element =>{
+  (number % parseInt(element) ==0)? new_list.push(parseInt(element)) : 0
+})
+console.log(new_list.length)
