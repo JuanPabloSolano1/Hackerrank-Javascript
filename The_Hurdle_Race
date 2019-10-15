@@ -1,0 +1,7 @@
+function hurdleRace(k, height) {
+let new_list = []
+height.map(element =>{
+  element > k? new_list.push(element) : new_list.push(k)
+})
+return (new_list.sort((a,b) => a - b )[new_list.length -1] -k)
+}
