@@ -1,0 +1,35 @@
+let keyboard = [3,1]
+let usb = [5,2,8]
+let budget = 10
+
+let new_list = []
+for (var i = 0; i < keyboard.length; i++) {
+  for (var j = 0; j < .length; j++) {
+    new_list.push(keyboard[i] + usb[j])
+  }
+}
+if(new_list.sort((a,b) => (b-a)).filter(n => n < budget)[0] > 0){
+  console.log(new_list.sort((a,b) => (b-a)).filter(n => n < budget)[0])
+} else{
+  console.log(-1)
+}
+
+--------------------------------------------------
+function getMoneySpent(keyboards, drives, b) {
+    // Complete this function
+    let max = -1;
+
+    // I'm trying to get the total number of keyboard and drive
+    // then compare to the money.
+    for(let i = 0; i < keyboards.length; i++){
+        var temp = 0;
+        for(let j = 0; j < drives.length; j++){
+            if(keyboards[i] + drives[j] <= ){
+                temp = keyboards[i] + drives[j];
+                max = temp > max ? temp : max;
+            }
+        }
+    }
+
+    return max;
+}
