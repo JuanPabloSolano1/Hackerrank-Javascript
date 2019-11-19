@@ -1,0 +1,39 @@
+function climbingLeaderboard(scores, alice) {
+let new_list = []
+ var uniqueItems =(array)=> Array.from(new Set(scores))
+ scores = uniqueItems(scores)
+ alice.map(element =>{
+   scores.push(element)
+   scores.sort((a,b)=> (b-a))
+   new_list.push(scores.indexOf(element))
+   scores.splice(scores.indexOf(element),1)
+ })
+ console.log(new_list.map(item => item + 1))
+}
+
+climbingLeaderboard([100,100,50,40,40,20,10],[5,25,50,120])
+
+function climbingLeaderboard(scores, alice) {
+  let rank = [];
+  for (let i = 0; i < scores.length; i++) {
+    if (rank.length === 0) {
+      rank.push(scores[i]);
+    } else {
+      if (rank[rank.length - 1] === scores[i]) {
+        continue;
+      }
+      rank.push(scores[i]);
+    }
+  }
+  
+  let res = [];
+  let lowestRank = rank.length;
+  for (let i = 0; i < alice.length; i++) {
+    while (alice[i] >= rank[lowestRank - 1] && lowestRank > 0) {
+      rank.pop;
+      lowestRank--;
+    }
+    res.push(lowestRank + 1);
+  }
+  return res;
+}
